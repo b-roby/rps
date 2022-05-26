@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Rock, Paper, Scissors!</title>
+  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content=""/>
+</head>
+
+<body>
+    <div id="app">
+      <div class="game">
+        <div class="player">
+          <h1>You: </h1>
+          <img v-bind:src="playerChoice">
+        </div>
+        <div class="opponent">
+          <h1>Opponent: </h1>
+          <img v-bind:src="botChoice">
+        </div>
+      </div>
+      <div class="choices">
+        <div class="rock">
+          <button @click="playerClick('rock')">Rock</button>
+        </div>
+        <div class="paper">
+          <button @click="playerClick('paper')">Paper</button>
+        </div>
+        <div class="scissors">
+          <button @click="playerClick('scissors')">Scissors</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
